@@ -22,7 +22,7 @@ $books = getBooks();
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 
@@ -35,9 +35,10 @@ $books = getBooks();
         <input type="submit" value="Cari">
     </form>
     <button class="button-add" onclick="window.location.href='<?php echo 'addBook.php'; ?>'">Tambah Buku</button>
-    <table>
-        <thead>
-            <tr>
+    <div class="table-container">
+        <table>
+            <thead>
+                <tr>
                 <th>Buku</th>
                 <th>Judul</th>
                 <th>Penulis</th>
@@ -70,6 +71,7 @@ $books = getBooks();
             <?php endforeach; ?>
         </tbody>
     </table>
+    </div>
 </div>
 
 <?php include __DIR__ . '/../../view/component/footer.php'; ?>

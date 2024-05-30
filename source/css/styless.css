@@ -9,7 +9,10 @@ body {
 /* Container */
 .container {
   padding: 20px;
-  margin-bottom: 50px;
+  background-image: #fff;
+  background-size: cover; /* Ukuran gambar akan menutupi seluruh elemen */
+  background-repeat: no-repeat; /* Gambar tidak akan diulang */
+  background-position: center; /* Gambar akan diposisikan di tengah */
 }
 
 .containerFlex {
@@ -42,7 +45,7 @@ body {
 
 .con-right img {
   max-width: 80%;
-  height: auto;
+  height: 80%;
   border-radius: 10px;
 }
 
@@ -140,19 +143,38 @@ textarea {
 }
 
 input[type="submit"] {
-  background-color: #4caf50;
+  background-color: #00b6ef;
   color: rgb(255, 255, 255);
   border: none;
   padding: 10px;
   border-radius: 5px;
   cursor: pointer;
   font-size: 16px;
+  margin-bottom: 10px;
 }
 
 input[type="submit"]:hover {
   background-color: #ffffff;
-  color: #4caf50;
-  border: 2px solid #4caf50;
+  color: #00b6ef;
+  border: 2px solid #00b6ef;
+}
+
+.btn-back {
+  background-color: #ffffff;
+  color: #00b6ef;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+  border: 2px solid #00b6ef;
+  width: 100%;
+}
+
+.btn-back:hover {
+  background-color: #00b6ef;
+  color: #ffff;
 }
 
 .form-group input[type="file"] {
@@ -173,6 +195,7 @@ input[type="submit"]:hover {
 
 .con-center {
   text-align: center;
+  width: 100%;
 }
 .container img {
   display: block;
@@ -222,16 +245,15 @@ img {
   text-decoration: none;
   outline: none;
   color: #fff;
-  background-color: #4caf50;
+  background-color: #00b6ef;
   border: none;
   border-radius: 5px;
   box-shadow: 0 4px #999;
 }
 .button:hover {
-  background-color: #3e8e41;
+  background-color: #333;
 }
 .button:active {
-  background-color: #3e8e41;
   box-shadow: 0 2px #666;
   transform: translateY(2px);
 }
@@ -244,21 +266,21 @@ img {
   text-align: center;
   text-decoration: none;
   outline: none;
-  color: #4caf50;
-  border-radius: 5px solid #4caf50;
+  color: #fff;
+  border-radius: 5px solid #fff;
   border-radius: 5px;
-  background-color: white;
+  background-color: #00b6ef;
   box-shadow: 0 2px #999;
   margin-top: 2%;
   width: 100%;
   transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease; /* Transisi yang mulus */
 }
 .button-add:hover {
-  background-color: #3e8e41;
-  color: white;
+  background-color: #fff;
+  color: #00b6ef;
 }
 .button-add:active {
-  background-color: #3e8e41;
+  background-color: #00b6ef;
   box-shadow: 0 2px #666;
   transform: translateY(2px);
 }
@@ -292,11 +314,11 @@ img {
 }
 
 .button.dipinjam {
-  background-color: #4caf50;
+  background-color: #00b6ef;
 }
 
 .button.dipinjam:hover {
-  background-color: #3e8e41;
+  background-color: #333;
 }
 
 .button.dipinjam:active {
@@ -334,4 +356,31 @@ input {
   width: 50%;
   padding: 5px;
   box-sizing: border-box;
+}
+
+.table-container {
+  max-height: 400px; /* Tinggi maksimum kontainer tabel */
+  overflow-y: auto; /* Scroll secara vertikal */
+  border: 1px solid #ccc; /* Opsional: memberi border pada kontainer */
+}
+
+table {
+  width: 100%; /* Lebar tabel penuh dalam kontainer */
+  border-collapse: collapse; /* Menghapus jarak antara sel tabel */
+}
+
+thead th {
+  background-color: #333; /* Warna latar belakang putih untuk header */
+  position: sticky; /* Membuat header tetap di atas saat di-scroll */
+  top: 0; /* Memastikan header tetap di bagian atas */
+  z-index: 1; /* Memberikan lapisan z-index agar header tetap di atas */
+  border: 1px solid #ddd; /* Border untuk header */
+  padding: 8px; /* Padding untuk sel header */
+  color: #fff;
+}
+
+tbody td {
+  border: 1px solid #ddd; /* Border untuk sel tubuh tabel */
+  padding: 8px; /* Padding untuk sel tubuh tabel */
+  background-color: white;
 }

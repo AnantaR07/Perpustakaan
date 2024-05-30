@@ -32,8 +32,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 
     $stmt->close();
-
-    $stmt->close();
 }
 
 $conn->close();
@@ -46,14 +44,14 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 
 <?php include __DIR__ . '/../../view/component/navbar.php'; ?>
 
 <div class="login-container">
-        <h2>Login</h2>
+        <h2>Login Admin</h2>
         <form action="loginPage.php" method="post">
             <div class="form-group">
                 <label for="username">Username:</label>
@@ -63,7 +61,9 @@ $conn->close();
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required>
             </div>
-            <button type="submit">Login</button>
+            <div class="form-group">
+                    <input type="submit" value="Submit">
+            </div>
         </form>
         <?php if (isset($error)): ?>
             <p class="error"><?php echo $error; ?></p>

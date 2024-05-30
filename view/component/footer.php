@@ -13,7 +13,7 @@
   padding: 20px 0;
   bottom: 0;
   width: 100%;
-  margin-top: 11%;
+  margin-top: 4%;
 }
 
 .footer a {

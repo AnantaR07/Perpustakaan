@@ -23,7 +23,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_book'])) {
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($book['title']); ?> - Detail Buku</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 <?php include __DIR__ . '/../../view/component/navbarAdmin.php'; ?>
@@ -49,9 +49,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST' && isset($_POST['update_book'])) {
                     <textarea name="description"><?php echo htmlspecialchars($book['description']); ?></textarea>
                 </div>
                 <div class="form-group">
-                    <button class="button-back" type="submit" name="update_book">Update Book</button>
+                    <button class="btn-back" type="submit" name="update_book">Update Book</button>
                 </div>
             </form>
+            <button class="btn-back" onclick="window.location.href='<?php echo 'admin.php'; ?>'">Kembali</button>
     </div>
 
     <?php include __DIR__ . '/../../view/component/footer.php'; ?>

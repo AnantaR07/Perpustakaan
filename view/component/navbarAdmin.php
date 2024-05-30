@@ -5,8 +5,9 @@
     <title>Library</title>
 </head>
 <style>
+
 .navbar {
-  background-color: #333;
+  background-color: #20343b;
   overflow: hidden;
   display: flex;
   justify-content: space-between;
@@ -33,14 +34,14 @@
 }
 
 .navbar a:hover {
-  color: #4caf50;
+  color: #018bd4;
 }
 
 .navbar button {
   padding: 10px 20px;
   font-size: 17px;
   cursor: pointer;
-  background-color: #4caf50;
+  background-color: #018bd4;
   color: white;
   border: none;
   border-radius: 5px;
@@ -48,18 +49,33 @@
 }
 
 .navbar button:hover {
-  background-color: #45a049;
+  background-color: #fff;
+  color: #018bd4;
 }
+
+.navbar img{
+  height: auto;
+  width: 60px;
+}
+
+.left{
+  display: flex;
+  justify-content: flex-start;
+  color: #018bd4;
+}
+
 </style>
 <body>
 <div class="navbar">
-    <h2>PERPUS-ON</h2>
+    <div class="left">
+      <img src="../../source/img/property/logo.jpg">
+      <h3>PERPUS-ON</h3>
+    </div>
     <div class="right">
     <?php if (isset($_SESSION['user_id'])): ?>
         <a href="../admin/admin.php">Home Admin</a>
         <button onclick="window.location.href='<?php echo '../user/index.php'; ?>'">Logout</button>
     <?php endif; ?>
-
     </div>
 </div>
 </body>

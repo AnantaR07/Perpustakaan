@@ -8,18 +8,19 @@ $books = getBooks();
 <head>
     <meta charset="UTF-8">
     <title>Library</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 
 <?php include __DIR__ . '/../../view/component/navbar.php'; ?>
 
     <div class="container">
-        <h1>Library Books</h1>
+        <h1>Pencarian Buku</h1>
         <form action="booksearch.php" method="get">
             <input type="text" name="keyword" placeholder="Pencarian berdasarkan judul buku/penulis">
             <input type="submit" value="Cari">
         </form>
+        <div class="table-container">
         <table>
             <thead>
                 <tr>
@@ -53,6 +54,7 @@ $books = getBooks();
                 <?php endforeach; ?>
             </tbody>
         </table>
+    </div>
     </div>
 
     <?php include __DIR__ . '/../../view/component/footer.php'; ?>

@@ -52,7 +52,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 <head>
     <meta charset="UTF-8">
     <title>Tambah Buku</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 
@@ -71,7 +71,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="text" name="description" required><br>
             <label>Gambar:</label>
             <div class="form-group">
-                <label for="image" class="custom-file-upload">Unggah Gambar </label>
+                <label for="image" class="custom-file-upload">Unggah Gambar Buku </label>
                 <input type="file" id="image" name="image" onchange="previewImage(event)">
                 <img id="preview" src="#" alt="Pratinjau Gambar" style="display: none;">
             <input type="submit" value="Tambah Buku">

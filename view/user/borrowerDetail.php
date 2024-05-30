@@ -18,7 +18,7 @@ if ($book_id > 0) {
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($book['title']); ?> - Detail Buku</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
     <?php include __DIR__ . '/../../view/component/navbar.php'; ?>
@@ -44,13 +44,16 @@ if ($book_id > 0) {
                 </div>
 
                 <div class="form-group">
+                    <label for="date">Tanggal Pengembalian:</label>
+                    <p><?php echo htmlspecialchars($book['return_date']); ?></p>
+                </div>
+
+                <div class="form-group">
                     <label for="address">Alamat:</label>
                     <p><?php echo htmlspecialchars($book['address']); ?></p>
                 </div>
 
-                <div class="form-group">
-                    <input type="submit" value="Kembali">
-                </div>
+                <button class="btn-back" onclick="window.location.href='<?php echo '../user/index.php'; ?>'">Kembali</button>
             </form>
         </div>
         <div class="con-right">

@@ -18,7 +18,7 @@ if ($book_id > 0) {
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($book['title']); ?> - Detail Buku</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
 <?php include __DIR__ . '/../../view/component/navbarAdmin.php'; ?>
@@ -40,6 +40,7 @@ if ($book_id > 0) {
         <p><strong>Description :</strong></p>
         <p><?php echo htmlspecialchars($book['description']); ?></p>
     </div>
+    <button class="btn-back" onclick="window.location.href='<?php echo '../admin/admin.php'; ?>'">Kembali</button>
     </div>
 
     <?php include __DIR__ . '/../../view/component/footer.php'; ?>

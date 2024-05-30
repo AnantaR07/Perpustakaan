@@ -19,7 +19,7 @@ if ($book_id > 0) {
 <head>
     <meta charset="UTF-8">
     <title><?php echo htmlspecialchars($book['title']); ?> - Detail Buku</title>
-    <link rel="stylesheet" href="../../source/css/styles.css">
+    <link rel="stylesheet" href="../../source/css/styless.css">
 </head>
 <body>
     <?php include __DIR__ . '/../../view/component/navbar.php'; ?>
@@ -28,7 +28,6 @@ if ($book_id > 0) {
         <div class="con-center">
         <h2><?php echo htmlspecialchars($book['title']); ?></h2>
         <img src="<?php echo htmlspecialchars($book['image']); ?>" alt="Book Image">
-        </div>
         <div class="info">
             <div class="label">Author</div>
             <div class="value">: <?php echo htmlspecialchars($book['author']); ?></div>
@@ -37,9 +36,12 @@ if ($book_id > 0) {
             <div class="label">Year</div>
             <div class="value">: <?php echo htmlspecialchars($book['year']); ?></div>
         </div>
-    <div class="description">
-        <p><strong>Description :</strong></p>
-        <p><?php echo htmlspecialchars($book['description']); ?></p>
+        <div class="description">
+            <p><strong>Description :</strong></p>
+            <p><?php echo htmlspecialchars($book['description']); ?></p>
+        </div>
+
+    <button class="btn-back" onclick="window.location.href='<?php echo '../user/index.php'; ?>'">Kembali</button>
     </div>
     </div>
 
